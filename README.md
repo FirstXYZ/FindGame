@@ -1,3 +1,5 @@
 # FindGame
-#lalala
-<img src="https://github.com/FirstXYZ/FindGame/edit/master/关卡-彩虹岛.RNG"/>
+###第一周工作汇总###
+##进行了游戏关卡的构思##
+<img src="https://github.com/FirstXYZ/FindGame/blob/master/%E5%85%B3%E5%8D%A1-%E5%BD%A9%E8%99%B9%E5%B2%9B.PNG"/>
+<p>关卡一：核心是通过不同传送之间的跳转来逐步揭开彩虹岛的密码，故事主线是男主角在彩虹岛中心醒来，但是失去了记忆，一棵古树告诉主角要不断去寻找自己的记忆，第一步就是要恢复彩虹岛的颜色。</p>
