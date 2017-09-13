@@ -10,7 +10,7 @@ public class StarBorn : MonoBehaviour
     Transform bornPlace;
     int i = 0;
     Vector3 starPos;
-
+ 
 
     // Use this for initialization
     void Start()
@@ -29,6 +29,7 @@ public class StarBorn : MonoBehaviour
     {
         for (; i < 10;)
         {
+     
             bornPlace = starBorn[Random.Range(0, starBorn.Length)].transform;
             starPos = new Vector3(bornPlace.position.x, bornPlace.position.y + 1, bornPlace.position.z);
             newStar = (GameObject)Instantiate(star, starPos, Quaternion.Euler(0, 90, 0));

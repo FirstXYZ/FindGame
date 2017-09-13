@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PeopleDeadControl : MonoBehaviour
 {
@@ -18,6 +20,7 @@ public class PeopleDeadControl : MonoBehaviour
     //private bool isRun;
     //private bool isStop;
     private bool idcard;
+    public Button Rgame;
     //private float i;
 
     // 注册监听,初始化
@@ -35,7 +38,7 @@ public class PeopleDeadControl : MonoBehaviour
         v = transform.position;
         //beforv=transform.position;
         //i = 0;
-
+    
     }
 
     //时间结束事件
@@ -179,6 +182,7 @@ public class PeopleDeadControl : MonoBehaviour
     void Dead()
     {
         animatar.SetBool("Dead", true);
+        Rgame.transform.position=new Vector3(600,150,0);
         if (isStar == true)
         {
             EatStar.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
@@ -186,6 +190,7 @@ public class PeopleDeadControl : MonoBehaviour
             //EatStar.transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, transform.position.y + 1, Time.deltaTime * 0.1f), transform.position.z);
         }
         StopAllCoroutines();
+      
 
     }
 
@@ -238,6 +243,14 @@ public class PeopleDeadControl : MonoBehaviour
     IEnumerator myTime()
     {
         yield return new WaitForSeconds(5f);
+    }
+
+    //重新开始事件
+
+    public void RGame()
+    {
+        SceneManager.LoadScene("First");
+ 
     }
 
 }
